@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/maudmain/readme-builder#readme",
   "dependencies": {
+    "@inquirer/checkbox": "^0.0.30-alpha.0",
     "inquirer": "^9.1.4"
   }
 }
