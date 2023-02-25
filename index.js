@@ -28,18 +28,10 @@ inquirer.prompt([
         name: 'usage',
     },
     {
-        type: 'checkbox',
+        type: 'list',
         message: 'Choose a license for your project:',
         choices: [
-            {
-                name: 'MIT', value: '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
-            },
-            {
-                name: 'Apache 2.0 License', value: '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)',
-            },
-            {
-                name: 'GNU GPL v3', value: '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)'
-            }
+            'MIT', 'Apache 2.0 License', 'GNU GPL v3'
         ],
         name: 'license',
     },
