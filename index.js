@@ -1,6 +1,7 @@
 import inquirer from 'inquirer';
 import * as fs from 'fs';
 
+
 // array of questions for user
 inquirer.prompt([
     {
@@ -28,9 +29,15 @@ inquirer.prompt([
         type: 'checkbox',
         message: 'Choose a license for your project:',
         choices: [
-            { name: 'MIT', value: 'MIT' },
-            { name: 'Apache 2.0 License', value: 'Apache 2.0 License' },
-            { name: 'GNU GPL v3', value: 'GNU GPL v3' },
+            {
+                name: 'MIT', value: '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
+            },
+            {
+                name: 'Apache 2.0 License', value: '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)',
+            },
+            {
+                name: 'GNU GPL v3', value: '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)'
+            }
         ],
         name: 'license',
     },
@@ -56,19 +63,59 @@ inquirer.prompt([
     },
 ])
     .then((answers) => {
-        const { title, description, installation, usage, license, contribution, test, github, email } = answers;
+        // console.log(answers)
+
+
+        const mdTemplate = generateMarkdown(answers);
         
+        fs.writeFile('README.md', mdTemplate, (error) =>
+            error ? console.error(error) : console.log('Readme file generated!')
+        );
+    });
 
-})
+const generateMarkdown = (answers) =>
+    ` 
+# ${answers.title}
 
-// function to write README file
-function writeToFile(fileName, data) {
-}
+## Description
 
-// function to initialize program
-function init() {
+${answers.description}
 
-}
+## Table of Contents
 
-// function call to initialize program
-init();
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contribution](#contribution)
+- [Test](#test)
+- [Questions](#questions)
+    
+## Installation
+
+${answers.installation}
+
+## Usage
+
+${answers.usage}
+
+## Contribution
+
+${answers.contribution}
+
+## Testing
+
+${answers.test}
+
+## License
+
+Licensed under the ${answers.license} license.
+${answers.license.value}
+     
+## Questions
+
+Feel free to contact us with suggestions for improvements, questions or concerns via email at ${answers.email}.
+And don't forget to check us up on GitHub at github.com/${answers.github}
+`;
+
+
+
