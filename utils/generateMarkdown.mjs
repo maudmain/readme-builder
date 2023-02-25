@@ -3,44 +3,43 @@ const generateMarkdown = (answers) =>
   ` 
 # ${answers.title}
 
-## Description
+## 💻 Description
 
 ${answers.description}
 
-## Table of Contents
+## 🧾 Table of Contents
 
 - [Installation](#installation)
 - [Usage](#usage)
 - [License](#license)
-- [Contribution](#contribution)
 - [Test](#test)
+- [Contribution](#contribution)
 - [Questions](#questions)
     
-## Installation
+## 🔧 Installation
 
 ${answers.installation}
 
-## Usage
+## ⏯️ Usage (How it works)
 
 ${answers.usage}
 
-## Contribution
-
-${answers.contribution}
-
-## Testing
+## 🧪 Testing
 
 ${answers.test}
 
-## License
+## 🧑‍🤝‍🧑 Contribution
+
+${answers.contribution}
+
+## 📜 License
 
 Licensed under the ${answers.license} license.
-${answers.license.value}
      
-## Questions
+## 💬 Questions
 
-Feel free to contact us with suggestions for improvements, questions or concerns via email at ${answers.email}.
-And don't forget to check us up on GitHub at github.com/${answers.github}
+Feel free to contact us with suggestions for improvements, questions or concerns via [email](${answers.email}).
+And don't forget to check us up on [GitHub](github.com/${answers.github})
 `;
 
 export default generateMarkdown;
