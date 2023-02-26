@@ -41,10 +41,23 @@ With this project I have learn how to:
 ## 🧪 Testing
 
 
-
 ## 🧑‍🤝‍🧑 Contribution
 
 If you're interested in contributing, fork the repo, make your changes, and submit a pull request.
+
+## Credits
+
+- edX Bootcamp: for project brief and criterias, tutorial and ressources about Node.js and ES6 provided during this week's course.
+
+What I have learned/ resources:
+- [Node.js tutorial](https://www.youtube.com/watch?v=TlB_eWDSMt4)
+- [npm](https://docs.npmjs.com/cli/v6/commands/npm-init)
+- [npm NodeSource](https://nodesource.com/blog/an-absolute-beginners-guide-to-using-npm/)
+- [Inquirer](https://www.npmjs.com/package/inquirer#questions)
+- [email validation](https://www.w3schools.blog/email-validation-javascript-js). Thanks Sansi for this link.
+- [shields.io](https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba)
+- [emojiTerra](https://emojiterra.com/)
+- [intro to ES6](https://andrew.hedges.name/es6/)
 
 ## 📜 License
 
