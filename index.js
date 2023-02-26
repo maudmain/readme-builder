@@ -1,5 +1,8 @@
+// import the node modules
 import inquirer from 'inquirer';
 import * as fs from 'fs';
+
+// import the separate js file with the markdown template
 import generateMarkdown from "./utils/generateMarkdown.mjs";
 
 // array of questions for user
@@ -55,7 +58,7 @@ const questions = [
 ];
 
 // function to initialize the program
-function init() {
+const init = () => {
     console.log(
         "\n",
         "-------------------- Welcome to README Builder --------------------",
@@ -63,16 +66,20 @@ function init() {
         "Answer the questions below to generate your README.md File",
         "\n"
     );
+    // call the inquirer prompts using the questions array as parameter
     inquirer.prompt(questions)
         .then((answers) => {
             // console.log(answers)
+            // create a markdown template using the generateMarkdown funtion from the second js file using the  questions answers as parameters
             const mdTemplate = generateMarkdown(answers);
         
-            fs.writeFile('README.md', mdTemplate, (error) =>
+            // use the fs.write file to create a readme.md with the project name added to the file name, using the mdTemplate
+            fs.writeFile(`${answers.title}-README.md`, mdTemplate, (error) =>
                 error ? console.error(error) : console.log('Readme file generated!')
             );
         });
 
 }
 
+//call the init function
 init();
