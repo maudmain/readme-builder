@@ -3,7 +3,7 @@ import inquirer from 'inquirer';
 import * as fs from 'fs';
 
 // import the separate js file with the markdown template
-import generateMarkdown from "./utils/generateMarkdown.mjs";
+import generateMarkdown, { validateEmail, validateUserName } from "./utils/generateMarkdown.mjs";
 
 // array of questions for user
 const questions = [
@@ -54,11 +54,13 @@ const questions = [
         type: 'input',
         message: 'What is your GitHub username?',
         name: 'github',
+        validate: validateUserName
     },
     {
         type: 'input',
         message: 'What is your email address?',
         name: 'email',
+        validate: validateEmail
     },
 ];
 
@@ -84,7 +86,7 @@ const init = () => {
             );
         });
 
-}
+}  
 
 //call the init function
 init();

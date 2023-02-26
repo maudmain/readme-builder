@@ -54,8 +54,28 @@ ${generateLicenseBadge(answers.license)}
 ## 💬 Questions
 
 Feel free to contact us with suggestions for improvements, questions or concerns via [email](${answers.email}).
+${validateEmail(answers.email)}
 And don't forget to check us up on [GitHub](github.com/${answers.github})
 `;
+
+// validate email format
+export function validateEmail(email) {
+  var mailformat = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+  if (email.match(mailformat)) {
+    return true;
+  } else {
+    return "Invalid email address.";
+  }
+}
+// validate GitHUb username format
+export function validateUserName(github) {
+  var userformat = /^([A-Za-z0-9\-])+$/;
+  if (github.match(userformat)) {
+    return true;
+  } else {
+    return "Invalid GitHub username.";
+  }
+}
 
 // export the generateMarkdown function from the current module, so that it can be imported and used in other modules
 export default generateMarkdown;
