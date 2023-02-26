@@ -45,6 +45,10 @@ ${answers.test}
 
 ${answers.contribution}
 
+## Credits
+
+${answers.credits}
+
 ## 📜 License
 
 Licensed under the ${answers.license} license.
