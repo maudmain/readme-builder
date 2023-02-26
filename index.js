@@ -2,17 +2,14 @@ import inquirer from 'inquirer';
 import * as fs from 'fs';
 import generateMarkdown from "./utils/generateMarkdown.mjs";
 
-
-
 // array of questions for user
-inquirer.prompt([
+const questions = [
     {
         type: 'input',
         message: 'What is the title of your project?',
         name: 'title',
     },
     {
-
         type: 'input',
         message: 'Provide a brief description of your project.',
         name: 'description',
@@ -55,18 +52,27 @@ inquirer.prompt([
         message: 'What is your email address?',
         name: 'email',
     },
-])
-    .then((answers) => {
-        // console.log(answers)
+];
 
-
-        const mdTemplate = generateMarkdown(answers);
+// function to initialize the program
+function init() {
+    console.log(
+        "\n",
+        "-------------------- Welcome to README Builder --------------------",
+        "\n",
+        "Answer the questions below to generate your README.md File",
+        "\n"
+    );
+    inquirer.prompt(questions)
+        .then((answers) => {
+            // console.log(answers)
+            const mdTemplate = generateMarkdown(answers);
         
-        fs.writeFile('README.md', mdTemplate, (error) =>
-            error ? console.error(error) : console.log('Readme file generated!')
-        );
-    });
+            fs.writeFile('README.md', mdTemplate, (error) =>
+                error ? console.error(error) : console.log('Readme file generated!')
+            );
+        });
 
+}
 
-
-
+init();
