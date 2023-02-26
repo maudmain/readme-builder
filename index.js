@@ -42,7 +42,7 @@ const questions = [
     },
     {
         type: 'input',
-        message: 'Detail any collaborators, third-party assets or tutorials you would liek to give credits to?',
+        message: 'Detail any collaborators, third-party assets or tutorials you would like to give credits to?',
         name: 'credits',
     },
     {

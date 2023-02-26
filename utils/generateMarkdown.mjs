@@ -53,8 +53,8 @@ ${generateLicenseBadge(answers.license)}
      
 ## 💬 Questions
 
-Feel free to contact us with suggestions for improvements, questions or concerns via [email](${answers.email}).
-${validateEmail(answers.email)}
+Feel free to contact us with suggestions for improvements, questions or concerns via [email](${answers.email}). <br>
+
 And don't forget to check us up on [GitHub](github.com/${answers.github})
 `;
 
