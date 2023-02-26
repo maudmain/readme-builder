@@ -42,6 +42,11 @@ const questions = [
     },
     {
         type: 'input',
+        message: 'Detail any collaborators, third-party assets or tutorials you would liek to give credits to?',
+        name: 'credits',
+    },
+    {
+        type: 'input',
         message: 'What are the test instructions for your project?',
         name: 'test',
     },
