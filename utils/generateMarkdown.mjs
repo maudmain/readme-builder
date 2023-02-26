@@ -58,7 +58,7 @@ ${validateEmail(answers.email)}
 And don't forget to check us up on [GitHub](github.com/${answers.github})
 `;
 
-// validate email format
+// validate email format using regex
 export function validateEmail(email) {
   var mailformat = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
   if (email.match(mailformat)) {
@@ -67,7 +67,7 @@ export function validateEmail(email) {
     return "Invalid email address.";
   }
 }
-// validate GitHUb username format
+// validate GitHUb username format using regex 
 export function validateUserName(github) {
   var userformat = /^([A-Za-z0-9\-])+$/;
   if (github.match(userformat)) {

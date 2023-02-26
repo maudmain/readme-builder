@@ -2,7 +2,7 @@
 import inquirer from 'inquirer';
 import * as fs from 'fs';
 
-// import the separate js file with the markdown template
+// import the separate js file with the markdown templating and email/ github validation functions
 import generateMarkdown, { validateEmail, validateUserName } from "./utils/generateMarkdown.mjs";
 
 // array of questions for user
@@ -54,12 +54,16 @@ const questions = [
         type: 'input',
         message: 'What is your GitHub username?',
         name: 'github',
+        // validate: (Function) Receive the user input and answers hash. Should return true if the value is valid, and an error message (String) otherwise. If false is returned, a default error message is provided.
+        // passing the function
         validate: validateUserName
     },
     {
         type: 'input',
         message: 'What is your email address?',
         name: 'email',
+        // validate: (Function) Receive the user input and answers hash. Should return true if the value is valid, and an error message (String) otherwise. If false is returned, a default error message is provided.
+        // passing the function
         validate: validateEmail
     },
 ];
