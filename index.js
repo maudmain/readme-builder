@@ -70,7 +70,7 @@ const questions = [
 
 // function to initialize the program
 const init = () => {
-    console.log(
+    console.info(
         "\n",
         "-------------------- Welcome to README Builder --------------------",
         "\n",
