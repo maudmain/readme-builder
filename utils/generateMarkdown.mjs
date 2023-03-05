@@ -22,7 +22,7 @@ ${answers.description}
 
 ## 🧾 Table of Contents
 
-- [Installation](#installation)
+- [Installation](#🔧 Installation)
 - [Usage](#usage)
 - [License](#license)
 - [Test](#test)
