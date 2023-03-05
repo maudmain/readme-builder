@@ -22,18 +22,19 @@ ${answers.description}
 
 ## 🧾 Table of Contents
 
-- [Installation](#🔧 Installation)
-- [Usage](#usage)
-- [License](#license)
-- [Test](#test)
-- [Contribution](#contribution)
-- [Questions](#questions)
+- [Installation](#🔧-Installation)
+- [Usage](#⏯️-usage)
+- [License](#📜-license)
+- [Test](#🧪-test)
+- [Credits](#credits)
+- [Contribution](#🧑‍🤝‍🧑-contribution)
+- [Questions](#💬-questions)
     
 ## 🔧 Installation
 
 ${answers.installation}
 
-## ⏯️ Usage (How it works)
+## ⏯️ Usage
 
 ${answers.usage}
 
