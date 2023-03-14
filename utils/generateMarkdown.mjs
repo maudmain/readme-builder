@@ -22,10 +22,10 @@ ${answers.description}
 
 ## 🧾 Table of Contents
 
-- [Installation](#🔧-Installation)
+- [Installation](#🔧-installation)
 - [Usage](#⏯️-usage)
 - [License](#📜-license)
-- [Test](#🧪-test)
+- [Test](#🧪-testing)
 - [Credits](#credits)
 - [Contribution](#🧑‍🤝‍🧑-contribution)
 - [Questions](#💬-questions)
